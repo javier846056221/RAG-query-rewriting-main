@@ -17,3 +17,6 @@ CUDA_VISIBLE_DEVICES=5,6,7,8,9,10,11,12,15,14 python scripts/training/train_text
 
 
 //--dataset hotpot --task step1 --split dev  --pid 3
+//--dataset hotpot --task wiki --split dev  --pid  1
+//--dataset hotpot --task rewrite --split dev --search wiki --pid 1 --nums 50
+//python main-0420.py --dataset hotpot --task rewrite2 --split dev --pid xx --promptfile xx --search bing  --repid xx --output_dir xx

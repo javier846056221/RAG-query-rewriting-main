@@ -39,7 +39,8 @@ class WikiEnv(gym.Env):
     self.observation_space = self.action_space = textSpace()
     self.search_time = 0
     self.num_searches = 0
-    self.appendsimilar = False
+    self.appendsimilar = True
+
     
   def _get_obs(self):
     return self.obs
@@ -130,7 +131,7 @@ class WikiEnv(gym.Env):
             break
           # return all lookuplists
           lookupres.append(self.obs)
-        self.obs = f"Similar: {self.result_titles[:5]}." + ' '.join(lookupres)
+        self.obs = f"Similar: {self.result_titles[:5]}." + '！！！！！！！！！！ '.join(lookupres)
         # if self.obs.startswith("No more results."):
         #   self.obs = f"Could not find {entity}. Similar: {self.result_titles[:5]}."
     else:
